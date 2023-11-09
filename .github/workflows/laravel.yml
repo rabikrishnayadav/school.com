@@ -1,0 +1,17 @@
+on: push
+name: 🚀 Deploy website on push
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.4
+      with:
+        server: 217.21.90.78
+        username: u667926427
+        password: Rakesh@23154
+        server-dir: /domains/rabikrishnayadav.com.np/public_html/school.com/
