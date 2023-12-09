@@ -68,10 +68,10 @@
               <input type="hidden" name="subject_id" value="{{ Request::get('subject_id' )}}">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Admin List</h3>
+                <h3 class="card-title">Timetable</h3>
               </div>
               <!-- /.card-header -->
-              <div class="card-body p-0">
+              <div class="card-body p-0" style="overflow:auto;">
                 <table class="table table-striped">
                   <thead>
                     <tr>
@@ -107,10 +107,10 @@
                     @endforeach
                   </tbody>
                 </table>
+                </div>
                 <div style="text-align: center; padding: 20px;">
                   <button class="btn btn-primary">Submit</button>
                 </div>
-              </div>
               <!-- /.card-body -->
             </div>
           </form>

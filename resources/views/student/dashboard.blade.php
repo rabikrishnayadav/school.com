@@ -28,7 +28,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>Rs. {{ number_format($TotalPaidAmount, 2) }}/-</h3>
+                <h4>Rs. {{ number_format($TotalPaidAmount) }}/-</h4>
 
                 <p>Total Paid Amount</p>
               </div>
@@ -43,7 +43,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{ $TotalSubject }}</h3>
+                <h4>{{ $TotalSubject }}</h4>
 
                 <p>Total Subject</p>
               </div>
@@ -59,7 +59,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{ $TotalNoticeborad }}</h3>
+                <h4>{{ $TotalNoticeborad }}</h4>
 
                 <p>Notice Board</p>
               </div>
@@ -75,7 +75,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{ $TotalHomework }}</h3>
+                <h4>{{ $TotalHomework }}</h4>
 
                 <p>Total Homework</p>
               </div>
@@ -91,7 +91,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{ $TotalSubmittedHomework }}</h3>
+                <h4>{{ $TotalSubmittedHomework }}</h4>
 
                 <p>Total Submitted Homework</p>
               </div>
@@ -106,7 +106,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>{{ $TotalAttendance }}</h3>
+                <h4>{{ $TotalAttendance }}</h4>
 
                 <p>Total Attendance</p>
               </div>

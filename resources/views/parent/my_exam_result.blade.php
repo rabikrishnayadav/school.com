@@ -28,7 +28,7 @@
                 <a class="btn btn-primary btn-sm float-right" target="_blank" href="{{ url('parent/my_exam_result/print?exam_id='.$value['exam_id'].'&student_id='.$getStudent->id) }}">Print</a>
               </div>
               <!-- /.card-header -->
-              <div class="card-body p-0">
+              <div class="card-body p-0" style="overflow:auto;">
                 <table class="table table-striped">
                   <thead>
                     <tr>

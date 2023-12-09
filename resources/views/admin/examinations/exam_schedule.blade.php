@@ -69,7 +69,7 @@
                 <h3 class="card-title">Exam Shedule</h3>
               </div>
               <!-- /.card-header -->
-              <div class="card-body p-0">
+              <div class="card-body p-0" style="overflow:auto;">
                 <table class="table table-striped">
                   <thead>
                     <tr>
@@ -117,10 +117,10 @@
                     @endforeach
                   </tbody>
                 </table>
+              </div>
                 <div style="text-align: center; padding: 20px;">
                   <button class="btn btn-primary">Submit</button>
                 </div>
-              </div>
               <!-- /.card-body -->
             </div>
             </form>

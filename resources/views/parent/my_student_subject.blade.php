@@ -28,7 +28,7 @@
                 <h3 class="card-title">Student Subject List</h3>
               </div>
               <!-- /.card-header -->
-              <div class="card-body p-0">
+              <div class="card-body p-0" style="overflow:auto;">
                 <table class="table table-striped">
                   <thead>
                     <tr>

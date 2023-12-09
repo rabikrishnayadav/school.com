@@ -28,7 +28,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{ $TotalStudent }}</h3>
+                <h4>{{ $TotalStudent }}</h4>
 
                 <p>Total Student</p>
               </div>
@@ -44,7 +44,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>{{ $TotalClass }}</h3>
+                <h4>{{ $TotalClass }}</h4>
 
                 <p>Total Class</p>
               </div>
@@ -60,7 +60,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{ $TotalSubject }}</h3>
+                <h4>{{ $TotalSubject }}</h4>
 
                 <p>Total Subject</p>
               </div>
@@ -76,7 +76,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{ $TotalNoticeborad }}</h3>
+                <h4>{{ $TotalNoticeborad }}</h4>
 
                 <p>Total Notice</p>
               </div>

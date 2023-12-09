@@ -28,7 +28,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>Rs. {{ number_format($getTotalFees, 2) }}/-</h3>
+                <h4>Rs. {{ number_format($getTotalFees) }}/-</h4>
 
                 <p>All Time Received Payment</p>
               </div>
@@ -42,7 +42,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>Rs. {{ number_format($getTotalTodayFees, 2) }}/-</h3>
+                <h4>Rs. {{ number_format($getTotalTodayFees) }}/-</h4>
 
                 <p>Today Received Payment</p>
               </div>
@@ -58,7 +58,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{ $TotalAdmin }}</h3>
+                <h4>{{ $TotalAdmin }}</h4>
 
                 <p>Total Admin</p>
               </div>
@@ -74,7 +74,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{ $TotalTeacher }}</h3>
+                <h4>{{ $TotalTeacher }}</h4>
 
                 <p>Total Teacher</p>
               </div>
@@ -90,7 +90,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{ $TotalStudent }}</h3>
+                <h4>{{ $TotalStudent }}</h4>
 
                 <p>Total Student</p>
               </div>
@@ -106,7 +106,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>{{ $TotalParent }}</h3>
+                <h4>{{ $TotalParent }}</h4>
 
                 <p>Total Parent</p>
               </div>
@@ -122,7 +122,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>{{ $TotalExam }}</h3>
+                <h4>{{ $TotalExam }}</h4>
 
                 <p>Total Exam</p>
               </div>
@@ -138,7 +138,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>{{ $TotalClass }}</h3>
+                <h4>{{ $TotalClass }}</h4>
 
                 <p>Total Class</p>
               </div>
@@ -154,7 +154,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>{{ $TotalSubject }}</h3>
+                <h4>{{ $TotalSubject }}</h4>
 
                 <p>Total Subject</p>
               </div>
