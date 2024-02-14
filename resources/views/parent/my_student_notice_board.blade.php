@@ -67,7 +67,7 @@
               </div>
               
               <div class="mailbox-read-message">
-                {{ $value->message }}
+                {!! $value->message !!}
               </div>
               <!-- /.mailbox-read-message -->
             </div>

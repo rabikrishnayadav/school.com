@@ -45,7 +45,7 @@
 
 
 @section('script')
-<script src='{{ url("public/dist/fullcalendar/index.global.js") }}'></script>
+<script src='{{ url("public/dist/fullcalendar/index.global.min.js") }}'></script>
 
 <script type="text/javascript">
   

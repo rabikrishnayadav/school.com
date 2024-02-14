@@ -47,7 +47,7 @@ class CommunicateController extends Controller
             }
         }
 
-        return redirect('admin/communicate/notice_board')->with('success', "Notice Board Successfully Created");
+        return redirect('admin/communicate/notice_board')->with('success', "Notice Successfully Created");
     }
 
     public function editNoticeBoard($id)
@@ -80,7 +80,7 @@ class CommunicateController extends Controller
             }
         }
 
-        return redirect('admin/communicate/notice_board')->with('success', "Notice Board Successfully Updated");
+        return redirect('admin/communicate/notice_board')->with('success', "Notice Successfully Updated");
     }
 
 
@@ -91,7 +91,7 @@ class CommunicateController extends Controller
 
         NoticeBoardMessageModel::DeleteRecord($id);
 
-        return redirect()->back()->with('success', "Notice Board Successfully Deleted");
+        return redirect()->back()->with('success', "Notice Successfully Deleted");
     }
 
     public function MyNoticeBoardStudent()

@@ -65,8 +65,11 @@ class CalendarController extends Controller
             {
                 $dataW = array();
                 $dataW['week_name'] = $valueW->name;
+                
                 $dataW['fullcalendar_day'] = $valueW->fullcalendar_day;
+
                 $ClassSubject = ClassSubjectTimetableModel::getRecordClassSubject($value->class_id,$value->subject_id,$valueW->id); 
+                
                 if (!empty($ClassSubject)) {
                        $dataW['start_time'] = $ClassSubject->start_time;
                        $dataW['end_time'] = $ClassSubject->end_time;
