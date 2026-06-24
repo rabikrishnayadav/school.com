@@ -7,60 +7,192 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About Laravel Installation
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**1\. Point Subdomain to VPS**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Create an **A Record** in your DNS:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| **Type** | **Name** | **Value**   |
+| -------- | -------- | ----------- |
+| A        | school   | YOUR_VPS_IP |
 
-## Learning Laravel
+**2\. Create Laravel Site in CloudPanel**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Login to CloudPanel:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+https://YOUR_SERVER_IP:8443
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Go to:
 
-## Laravel Sponsors
+Sites → Add Site → Create PHP Site
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Select:
 
-### Premium Partners
+Application: Laravel  
+Domain: school.rabikrishnayadav.com.np  
+PHP Version: 8.4 or newer
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+CloudPanel automatically configures Laravel's public directory correctly.
 
-## Contributing
+## 3\. Create Database
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Inside CloudPanel:
 
-## Code of Conduct
+Sites  
+└─ school.rabikrishnayadav.com.np  
+└─ Databases  
+└─ Add Database
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Save:
 
-## Security Vulnerabilities
+DB_DATABASE=school  
+DB_USERNAME=rabischl  
+DB_PASSWORD=Rabi@23154
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 4\. Create GitHub Personal Access Token
 
-## License
+Because the repository is private, create a token:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+GitHub →
+
+Settings  
+→ Developer Settings  
+→ Personal Access Tokens  
+→ Fine-grained Tokens
+
+Grant:
+
+Repository access:  
+✓ school.com  
+<br/>Permissions:  
+✓ Contents (Read)
+
+Copy the token.
+
+## 5\. Connect to Site via SSH
+
+Find the Site User in CloudPanel.
+
+SSH into the site:
+
+ssh site-user@YOUR_SERVER_IP
+
+Go to htdocs:
+
+cd ~/htdocs
+
+You should see:
+
+school.rabikrishnayadav.com.np
+
+Remove default files:
+
+rm -rf school.rabikrishnayadav.com.np/.\* \*
+
+## 6\. Clone Private Repository
+
+Using your GitHub username and token:
+
+git clone https://GITHUB_USERNAME:<GITHUB_TOKEN@github.com>/rabikrishnayadav/school.com.git school.rabikrishnayadav.com.np
+
+Example:
+
+git clone [https://rabikrishnayadav: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@github.com/rabikrishnayadav/school.com.git school.rabikrishnayadav.com.np](https://rabikrishnayadav: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@github.com/rabikrishnayadav/school.com.git%20school.rabikrishnayadav.com.np)
+
+## 7\. Install Composer Dependencies
+
+cd school.rabikrishnayadav.com.np
+
+composer update  
+composer install --no-dev --optimize-autoloader
+
+Laravel deployment should use Composer with production optimizations.
+
+## 8\. Configure Environment File
+
+cp .env.example .env
+
+Edit:
+
+nano .env
+
+Set:
+
+APP_NAME="School Management System"  
+APP_ENV=production  
+APP_DEBUG=false  
+APP_URL=<https://school.rabikrishnayadav.com.np>  
+<br/>DB_CONNECTION=mysql  
+DB_HOST=127.0.0.1  
+DB_PORT=3306  
+DB_DATABASE=school_db  
+DB_USERNAME=school_user  
+DB_PASSWORD=yourpassword
+
+## 9\. Generate Application Key
+
+php artisan key:generate
+
+**10\. Run Database Migration**
+[school_db.sql](https://github.com/user-attachments/files/29280858/school_db.sql)
+php artisan migrate --force
+
+If you have seeders:
+
+php artisan db:seed --force
+
+**11\. Set Permissions**
+
+chown -R rabikrishnayadav-school:rabikrishnayadav-school \\
+
+/home/rabikrishnayadav-school/htdocs/school.rabikrishnayadav.com.np
+
+chmod -R 775 storage  
+chmod -R 775 bootstrap/cache
+
+Laravel requires writable storage and cache directories.
+
+or if still failing:
+
+chmod -R 777 storage  
+chmod -R 777 bootstrap/cache
+
+(Use 777 only for testing. After it works, switch back to 775.)
+
+**12\. Optimize Laravel**
+
+php artisan config:cache  
+php artisan route:cache  
+php artisan view:cache
+
+**13\. Enable SSL**
+
+CloudPanel →
+
+Sites  
+→ SSL/TLS  
+→ Actions  
+→ New Let's Encrypt Certificate
+
+Install SSL certificate.
+
+**14\. Verify Document Root**
+
+CloudPanel Laravel sites should point to:
+
+/public
+
+## 15\. Future Updates
+
+When you push new code to GitHub:
+
+cd ~/htdocs/school.rabikrishnayadav.com.np  
+<br/>git pull origin main  
+<br/>composer install --no-dev --optimize-autoloader  
+<br/>php artisan migrate --force  
+<br/>php artisan optimize:clear  
+<br/>php artisan config:cache  
+php artisan route:cache  
+php artisan view:cache
+
