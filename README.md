@@ -48,7 +48,7 @@ Save:
 
 DB_DATABASE=school  
 DB_USERNAME=rabischl  
-DB_PASSWORD=Rabi@23154
+DB_PASSWORD=Rabi@test
 
 ## 4\. Create GitHub Personal Access Token
 
@@ -98,7 +98,7 @@ git clone https://GITHUB_USERNAME:<GITHUB_TOKEN@github.com>/rabikrishnayadav/sch
 
 Example:
 
-git clone [https://rabikrishnayadav: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@github.com/rabikrishnayadav/school.com.git school.rabikrishnayadav.com.np](https://rabikrishnayadav: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@github.com/rabikrishnayadav/school.com.git%20school.rabikrishnayadav.com.np)
+git clone [https://rabikrishnayadav:github_access_token@github.com/rabikrishnayadav/school.com.git school.rabikrishnayadav.com.np](https://rabikrishnayadav:github_access_token@github.com/rabikrishnayadav/school.com.git%20school.rabikrishnayadav.com.np)
 
 ## 7\. Install Composer Dependencies
 
@@ -128,7 +128,7 @@ DB_HOST=127.0.0.1
 DB_PORT=3306  
 DB_DATABASE=school_db  
 DB_USERNAME=school_user  
-DB_PASSWORD=yourpassword
+DB_PASSWORD=yourpassworddummy
 
 ## 9\. Generate Application Key
 
